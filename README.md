@@ -6,8 +6,8 @@
 
 
 2. Intellij Projests
-   Yours - EasyShopBackend
-   Ours - EasyShopFrontend
+- Yours - EasyShopBackend
+- Ours - EasyShopFrontend
 
 GitHub Project Board
 

@@ -5,7 +5,7 @@
 ## EasyShop Databases
 ![Easyshop Database screenshot.png](Easyshop%20Database%20screenshot.png)
 
-### Category Table 
+### Categories Table 
 ![MySQL category table screenshot .png](MySQL%20category%20table%20screenshot%20.png)
 
 ### Products Table

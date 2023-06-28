@@ -2,6 +2,8 @@
 
 
 
+![EasyShopBackend screenshot.png](EasyShopBackend%20screenshot.png)
+![EasyShopBackend screenshot1.png](EasyShopBackend%20screenshot1.png)
 ## EasyShop Databases
 ![Easyshop Database screenshot.png](Easyshop%20Database%20screenshot.png)
 

@@ -1,4 +1,14 @@
-# EasyShopBackend
+# EasyShopBackEnd Application
+
+#### 
+The EasyShopBackEnd Application is a backend Spring Boot Java API project that supports the EasyShop e-commerce website.
+It provides the following features:
+
+1. User Registration and Login: Users can create accounts and securely log in to access personalized features and make purchases.
+
+2. Product Display by Category: Users can browse products organized into different categories, making it easier to find desired items.
+
+3. Search and Filtering: Users can search for specific products or apply filters to refine the displayed product list, improving the user experience with more targeted results.
 
 ![EasyShopBackend screenshot.png](EasyShopBackend%20screenshot.png)
 

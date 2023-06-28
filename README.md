@@ -11,6 +11,5 @@
 
 ### Products Table
 ![MySQL products table screenshot.png](MySQL%20products%20table%20screenshot.png)
-
 ## Postman
 ![postman screenshot.png](postman%20screenshot.png)

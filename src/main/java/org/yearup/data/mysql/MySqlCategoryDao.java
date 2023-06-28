@@ -13,35 +13,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao
-{
+public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao {
 
-    public MySqlCategoryDao(DataSource dataSource)
-    {
+    public MySqlCategoryDao(DataSource dataSource) {
         super(dataSource);
     }
 
     @Override
-    public List<Category> getAllCategories()
-    {
+    public List<Category> getAllCategories() {
         // get all categories
 
         List<Category> categories = new ArrayList<>();
         String sql = "SELECT * FROM categories;";
 
-        try(
+        try (
                 Connection connection = getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 ResultSet resultSet = preparedStatement.executeQuery();
         ) {
 
-            while(resultSet.next()){
+            while (resultSet.next()) {
 
                 Category category = mapRow(resultSet);
                 categories.add(category);
             }
 
-        } catch(SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
@@ -49,8 +46,7 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao
     }
 
     @Override
-    public Category getById(int categoryId)
-    {
+    public Category getById(int categoryId) {
         // get category by id
 
         String sql = "SELECT * FROM categories WHERE category_id=?;";
@@ -80,24 +76,23 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao
     }
 
     @Override
-    public Category create(Category category)
-    {
+    public Category create(Category category) {
         // create a new category
 
         String sql = "INSERT INTO categories(name, description) VALUES(?,?);";
 
-        try(
+        try (
                 Connection connection = getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        ){
+        ) {
             preparedStatement.setString(1, category.getName());
             preparedStatement.setString(2, category.getDescription());
             preparedStatement.executeUpdate();
 
             try (
                     ResultSet generatedKeys = preparedStatement.getGeneratedKeys()
-            ){
-                if(generatedKeys.next()){
+            ) {
+                if (generatedKeys.next()) {
                     Long id = generatedKeys.getLong(1);
                     category.setCategoryId(Math.toIntExact(id));
                     return category;
@@ -107,15 +102,14 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao
                 }
             }
 
-        } catch(SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return category;
     }
 
     @Override
-    public void update(int categoryId, Category category)
-    {
+    public void update(int categoryId, Category category) {
         // update category
         String sql = "UPDATE Categories SET Name = ? WHERE CategoryID = ?";
 
@@ -133,8 +127,7 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao
     }
 
     @Override
-    public void delete(int categoryId)
-    {
+    public void delete(int categoryId) {
         // delete category
 
         String sql = "DELETE FROM Categories WHERE CategoryID = ?";
@@ -152,14 +145,12 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao
 
     }
 
-    private Category mapRow(ResultSet row) throws SQLException
-    {
+    private Category mapRow(ResultSet row) throws SQLException {
         int categoryId = row.getInt("category_id");
         String name = row.getString("name");
         String description = row.getString("description");
 
-        Category category = new Category()
-        {{
+        Category category = new Category() {{
             setCategoryId(categoryId);
             setName(name);
             setDescription(description);

@@ -1,28 +1,16 @@
 # EasyShopBackend
 
-#### Is the name of the application
-#### The name of the git repo
-#### The name of the IntelliJ Project
 
 
-2. Intellij Projests
-- Yours - EasyShopBackend
-- Ours - EasyShopFrontend
+## EasyShop Databases
+![Easyshop Database screenshot.png](Easyshop%20Database%20screenshot.png)
 
-GitHub Project Board
+### Category Table 
+![MySQL category table screenshot .png](MySQL%20category%20table%20screenshot%20.png)
 
-A notebook of some kind to keep your progress in
-
-Your code :
-Has comments where necessary
-
-- Proper use of naming conventions
-- Proper use of capitalization conventions
-
-Software:
+### Products Table
+![MySQL products table screenshot.png](MySQL%20products%20table%20screenshot.png)
 
 
-- configure your database
-- configure postman
-- load scripts
- 
+## Postman
+![postman screenshot.png](postman%20screenshot.png)

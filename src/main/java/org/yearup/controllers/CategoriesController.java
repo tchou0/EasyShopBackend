@@ -15,7 +15,7 @@ import java.util.List;
 // http://localhost:8080/categories
 // add annotation to allow cross site origin request
 @RestController
-@RequestMapping("/categories")
+@RequestMapping("categories")
 @CrossOrigin
 public class CategoriesController {
     private CategoryDao categoryDao;
@@ -30,16 +30,15 @@ public class CategoriesController {
     }
     // add the appropriate annotation for a get action
     @GetMapping
-    @PreAuthorize("permitAll()")
     public List<Category> getAll() {
         // find and return all categories
+
         return categoryDao.getAllCategories();
     }
 
     // add the appropriate annotation for a get action
 
     @GetMapping("/{id}")
-    @PreAuthorize("permitAll()")
     public Category getById(@PathVariable int id) {
         // get the category by id
         return categoryDao.getById(id);
@@ -65,7 +64,7 @@ public class CategoriesController {
     // add annotation to call this method for a PUT (update) action - the url path must include the categoryId
     // add annotation to ensure that only an ADMIN can call this function
     @PutMapping("/{id}")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     public void updateCategory(@PathVariable int id, @RequestBody Category category) {
         // update the category by id
         categoryDao.update(id, category);
@@ -75,7 +74,7 @@ public class CategoriesController {
     // add annotation to call this method for a DELETE action - the url path must include the categoryId
     // add annotation to ensure that only an ADMIN can call this function
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     public void deleteCategory(@PathVariable int id) {
         // delete the category by id
         categoryDao.delete(id);

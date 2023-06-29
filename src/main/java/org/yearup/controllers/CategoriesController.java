@@ -1,7 +1,9 @@
 package org.yearup.controllers;
 
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -41,23 +43,22 @@ public class CategoriesController {
 
     // add the appropriate annotation for a get action
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
-    public Category getById(@PathVariable int id) {
+    @GetMapping("/{id}")
+    public ResponseEntity <Category> getById(@PathVariable int id) {
+
         // get the category by id
 //        try{
-//            Category getCategory = categoryDao.getById(id);
+            Category getCategory = categoryDao.getById(id);
 //
 //            return getCategory;
 //        }catch(Exception e){
 //            throw  new ResponseStatusException(HttpStatus.NOT_FOUND);
 //
 //        }
-        if (categoryDao.getById(id) == null) {
+        if (getCategory == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
-
-
-        return categoryDao.getById(id);
+        return ResponseEntity.ok(getCategory);
     }
 
     // the url to return all products in category 1 would look like this

@@ -13,7 +13,7 @@ It provides the following features:
 ![EasyShopBackend screenshot.png](EasyShopBackend%20screenshot.png)
 
 ![EasyShopBackend screenshot1.png](EasyShopBackend%20screenshot1.png)
-## EasyShop Databases
+## Connecting EasyShop Database with MySQL Workbench
 ![Easyshop Database screenshot.png](Easyshop%20Database%20screenshot.png)
 
 ### Categories Table 
@@ -21,5 +21,9 @@ It provides the following features:
 
 ### Products Table
 ![MySQL products table screenshot.png](MySQL%20products%20table%20screenshot.png)
-## Postman
+## Testing EasyShop Application with Postman
+
+#####  Using Postman for automated testing to ensure the functionality and reliability of the EasyShopBackend Application.
+##### Postman is a powerful API testing tool that allows us to send requests to the application's endpoints and validate the responses.
+
 ![postman screenshot.png](postman%20screenshot.png)

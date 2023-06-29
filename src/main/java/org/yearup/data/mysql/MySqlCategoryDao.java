@@ -130,7 +130,7 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao {
     public void delete(int categoryId) {
         // delete category
 
-        String sql = "DELETE FROM Categories WHERE CategoryID = ?";
+        String sql = "DELETE FROM Categories WHERE Category_Id = ?";
 
         try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {

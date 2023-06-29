@@ -1,5 +1,4 @@
 package org.yearup.controllers;
-
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,7 +24,6 @@ public class CategoriesController {
     private CategoryDao categoryDao;
     private ProductDao productDao;
 
-
     // create an Autowired controller to inject the categoryDao and ProductDao
     @Autowired
     public CategoriesController(CategoryDao categoryDao, ProductDao productDao) {
@@ -44,17 +42,11 @@ public class CategoriesController {
     // add the appropriate annotation for a get action
 
     @GetMapping("/{id}")
-    public ResponseEntity <Category> getById(@PathVariable int id) {
-
+    public ResponseEntity<Category> getById(@PathVariable int id) {
         // get the category by id
-//        try{
-            Category getCategory = categoryDao.getById(id);
-//
-//            return getCategory;
-//        }catch(Exception e){
-//            throw  new ResponseStatusException(HttpStatus.NOT_FOUND);
-//
-//        }
+
+        Category getCategory = categoryDao.getById(id);
+
         if (getCategory == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
@@ -71,7 +63,6 @@ public class CategoriesController {
 
     // add annotation to call this method for a POST action
     // add annotation to ensure that only an ADMIN can call this function
-
     @RequestMapping(path = "", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
 
@@ -90,7 +81,6 @@ public class CategoriesController {
         // update the category by id
         categoryDao.update(id, category);
     }
-
 
     // add annotation to call this method for a DELETE action - the url path must include the categoryId
     // add annotation to ensure that only an ADMIN can call this function

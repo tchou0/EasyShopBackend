@@ -24,13 +24,6 @@ public class ShoppingCartController {
     private UserDao userDao;
     private ProductDao productDao;
 
-    //============================== Constructor added =======================================
-    // public ShoppingCartController(ShoppingCartDao shoppingCartDao, UserDao userDao, ProductDao productDao) {
-    //     this.shoppingCartDao = shoppingCartDao;
-    //     this.userDao = userDao;
-    //     this.productDao = productDao;
-    // }
-
     // each method in this controller requires a Principal object as a parameter
     @GetMapping
     public ShoppingCart getCart(Principal principal) {
@@ -52,7 +45,6 @@ public class ShoppingCartController {
     // https://localhost:8080/cart/products/15 (15 is the productId to be added
     @PostMapping("/products/{productId}")
     public void addToCart(@PathVariable int productId, Principal principal) {
-
     }
 
     // add a PUT method to update an existing product in the cart - the url should be
@@ -60,7 +52,6 @@ public class ShoppingCartController {
     // the BODY should be a ShoppingCartItem - quantity is the only value that will be updated
     @PutMapping("/products/{productId}")
     public void updateCartItem(@PathVariable int productId, @RequestBody ShoppingCartItem shoppingCartItem, Principal principal) {
-
     }
 
     // add a DELETE method to clear all products from the current users cart

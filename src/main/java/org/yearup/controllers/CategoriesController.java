@@ -35,12 +35,10 @@ public class CategoriesController {
     @GetMapping
     public List<Category> getAll() {
         // find and return all categories
-
         return categoryDao.getAllCategories();
     }
 
     // add the appropriate annotation for a get action
-
     @GetMapping("/{id}")
     public ResponseEntity<Category> getById(@PathVariable int id) {
         // get the category by id
@@ -65,7 +63,6 @@ public class CategoriesController {
     // add annotation to ensure that only an ADMIN can call this function
     @RequestMapping(path = "", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
-
     @PreAuthorize("hasRole('ADMIN')")
     public Category addCategory(@RequestBody Category category) {
         // insert the category

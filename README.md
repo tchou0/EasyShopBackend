@@ -46,6 +46,7 @@ This code retrieves all categories from the database, making it easy to access a
 
 ## Conclusion 
 I'm very grateful for being in this class and having a great professor who has taught us how to code.
+
 Also thank you to my peers for their help and hard work.
 Let's continue to learn, grow, and create amazing things together!
 

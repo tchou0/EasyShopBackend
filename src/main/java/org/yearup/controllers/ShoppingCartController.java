@@ -1,5 +1,4 @@
 package org.yearup.controllers;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +9,6 @@ import org.yearup.data.UserDao;
 import org.yearup.models.ShoppingCart;
 import org.yearup.models.ShoppingCartItem;
 import org.yearup.models.User;
-
 import java.security.Principal;
 
 // convert this class to a REST controller

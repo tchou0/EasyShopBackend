@@ -10,6 +10,13 @@ It provides the following features:
 
 3. Search and Filtering: Users can search for specific products or apply filters to refine the displayed product list, improving the user experience with more targeted results.
 
+### Searching Products by Filter
+![EasyShopWeb Filter screenshot.png](EasyShopWeb%20Filter%20screenshot.png)
+### Searching Products by Color
+![EasyShopWeb ShowAll screenshot.png](EasyShopWeb%20ShowAll%20screenshot.png)
+
+
+### Here is how the Application looks like inside of IntelliJ 
 ![EasyShopBackend screenshot.png](EasyShopBackend%20screenshot.png)
 
 ![EasyShopBackend screenshot1.png](EasyShopBackend%20screenshot1.png)

@@ -18,10 +18,10 @@ It provides the following features:
 ![EasyShopWeb Filter screenshot.png](EasyShopWeb%20Filter%20screenshot.png)
 ### Searching Products by Color
 ![EasyShopWeb ShowAll screenshot.png](EasyShopWeb%20ShowAll%20screenshot.png)
-### Searching by Price Range
+### Searching Products by Price Range
 ![easyshopweb price screenshot.png](easyshopweb%20price%20screenshot.png)
 
-### Here is how the Application looks like inside of IntelliJ 
+### Here is how the application looks like inside of IntelliJ 
 ![EasyShopBackend screenshot.png](EasyShopBackend%20screenshot.png)
 
 ![EasyShopBackend screenshot1.png](EasyShopBackend%20screenshot1.png)
@@ -36,6 +36,6 @@ It provides the following features:
 ## Testing EasyShop Application with Postman
 
 #####  Using Postman for automated testing to ensure the functionality and reliability of the EasyShopBackend Application.
-##### Postman is a powerful API testing tool that allows us to send requests to the application's endpoints and validate the responses.
-
 ![postman screenshot.png](postman%20screenshot.png)
+### Passing all the tests
+![Easyshop solo postman testing screen.png](Easyshop%20solo%20postman%20testing%20screen.png)

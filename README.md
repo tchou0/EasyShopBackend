@@ -40,7 +40,7 @@ It provides the following features:
 ### Passing all the tests
 ![Easyshop solo postman testing screen.png](Easyshop%20solo%20postman%20testing%20screen.png)
 
-### One interesting peice of code 
+### One interesting piece of code 
                String sql = "SELECT * FROM categories;";
 This code retrieves all categories from the database, making it easy to access and use category data in the application.
 

@@ -45,9 +45,7 @@ It provides the following features:
 This code retrieves all categories from the database, making it easy to access and use category data in the application.
 
 ## Conclusion 
-I'm very grateful for being in this class and having a great professor who has taught us how to code.
-
-Also thank you to my peers for their help and hard work.
+Thank you everyone and I'm very grateful for being in this class,
 Let's continue to learn, grow, and create amazing things together!
 
 

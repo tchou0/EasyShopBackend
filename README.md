@@ -16,11 +16,10 @@ It provides the following features:
 ![EasyShopWeb login screenshot.png](EasyShopWeb%20login%20screenshot.png)
 ### Searching Products by Filter
 ![EasyShopWeb Filter screenshot.png](EasyShopWeb%20Filter%20screenshot.png)
-### Searching Products by Price Range
-![easyshopweb price screenshot.png](easyshopweb%20price%20screenshot.png)
 ### Searching Products by Color
 ![EasyShopWeb ShowAll screenshot.png](EasyShopWeb%20ShowAll%20screenshot.png)
-
+### Searching Products by Price Range
+![easyshopweb price screenshot.png](easyshopweb%20price%20screenshot.png)
 
 ### Here is how the application looks like inside of IntelliJ 
 ![EasyShopBackend screenshot.png](EasyShopBackend%20screenshot.png)
